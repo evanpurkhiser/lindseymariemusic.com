@@ -6,6 +6,7 @@ import Logo from 'app/components/logo';
 import facebookLogo from 'app/assets/facebook.svg';
 import instagramLogo from 'app/assets/instagram.svg';
 import spotifyLogo from 'app/assets/spotify.svg';
+import bandcampLogo from 'app/assets/bandcamp.svg';
 import soundcloudLogo from 'app/assets/soundcloud.svg';
 
 const Info = props => (
@@ -34,6 +35,7 @@ const Info = props => (
         src={spotifyLogo}
         to="https://open.spotify.com/artist/3CNClHbvGoliUd7kzcNzGl"
       />
+      <Icon src={bandcampLogo} to="http://lindseymariemusic.bandcamp.com" />
       <Icon
         src={soundcloudLogo}
         to="https://soundcloud.com/lindseymarie_vocalist"

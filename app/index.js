@@ -41,7 +41,7 @@ injectGlobal`
 `;
 
 const App = styled('div')`
-  height: 100vh;
+  min-height: 100vh;
   padding: 7vh 0;
   display: flex;
   align-items: center;
