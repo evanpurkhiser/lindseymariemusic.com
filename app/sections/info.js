@@ -11,9 +11,9 @@ import soundcloudLogo from 'app/assets/soundcloud.svg';
 
 const Info = props => (
   <Section>
-    <Logo />
+    <HeaderLogo />
 
-    <Heading>Singer &amp; Songwriter</Heading>
+    <Title>Singer &amp; Songwriter</Title>
     <p>
       Lindsey Marie is a multi-genre vocalist and songwriter based out of
       Chicago USA. Having fostered a love and passion for singing since
@@ -54,25 +54,30 @@ const Info = props => (
 
 const Section = styled('div')`
   max-width: 750px;
-  padding: 0 95px;
+  padding: 7vh 95px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
-  @media only screen and (max-width: 600px) {
-    padding: 0 20px;
+  @media screen and (max-width: 600px) {
+    padding: 15px;
   }
 `;
 
-const Heading = styled('h1')`
+const HeaderLogo = styled(Logo)`
+  margin: 0 auto;
+
+  @media screen and (max-width: 600px) {
+    max-width: none;
+  }
+`;
+
+const Title = styled('h1')`
   margin: 50px 0;
 `;
 
 const SocialIcons = styled('div')`
   display: flex;
   max-width: 350px;
-  margin: 40px 0;
+  margin: 40px auto;
   justify-content: space-between;
 `;
 

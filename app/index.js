@@ -12,20 +12,24 @@ injectGlobal`
     box-sizing: border-box;
   }
 
+  :root {
+    font-size: 16px;
+  }
+
+  ::selection {
+    background: #d4f3ff;
+  }
+
   body {
     margin: 0;
-    font: 18px/1.6 Nunito;
+    font: 1.125rem/1.6 Nunito;
     background: #FCFCFB;
     color: #3B2B2D;
   }
 
   h1 {
-    font: bold 42px Comfortaa;
+    font: bold 2.625rem Comfortaa;
     color: #64494C
-  }
-
-  ::selection {
-    background: #d4f3ff;
 
   }
 
@@ -38,11 +42,20 @@ injectGlobal`
       color: #62494c;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    small {
+      font-size: 0.875rem;
+    }
+  }
 `;
 
 const App = styled('div')`
   min-height: 100vh;
-  padding: 7vh 0;
   display: flex;
   align-items: center;
   flex-direction: column;
