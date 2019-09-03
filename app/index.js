@@ -45,7 +45,7 @@ injectGlobal`
 
   @media screen and (max-width: 600px) {
     h1 {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
     }
 
     small {
