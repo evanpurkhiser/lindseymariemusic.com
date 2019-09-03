@@ -56,10 +56,13 @@ const Section = styled('div')`
   max-width: 750px;
   padding: 0 95px;
   text-align: center;
-
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 
 const Heading = styled('h1')`
@@ -68,7 +71,7 @@ const Heading = styled('h1')`
 
 const SocialIcons = styled('div')`
   display: flex;
-  width: 350px;
+  max-width: 350px;
   margin: 40px 0;
   justify-content: space-between;
 `;
