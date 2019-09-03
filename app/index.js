@@ -6,7 +6,7 @@ import Info from 'app/sections/info';
 import Releases from 'app/sections/releases';
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Comfortaa|Nunito');
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa|Nunito:400,600');
 
   * {
     box-sizing: border-box;

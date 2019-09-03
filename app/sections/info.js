@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import Logo from 'app/components/logo';
+import LatestRelease from 'app/components/latestRelease';
 
 import facebookLogo from 'app/assets/facebook.svg';
 import instagramLogo from 'app/assets/instagram.svg';
@@ -21,6 +22,8 @@ const Info = props => (
       Mezzo-Soprano, Lindsey’s powerful and hard hitting vocals include an
       emotional edge that resonates across the dance floor.
     </p>
+
+    <LatestReleaseItem />
 
     <SocialIcons>
       <Icon
@@ -52,9 +55,9 @@ const Info = props => (
   </Section>
 );
 
-const Section = styled('div')`
+const Section = styled('section')`
   max-width: 750px;
-  padding: 7vh 95px;
+  padding: 4vh 95px;
   text-align: center;
 
   @media screen and (max-width: 600px) {
@@ -97,6 +100,11 @@ const Icon = styled(({ src, to, ...props }) => (
     color: #da6da1;
     transform: scale(1.1);
   }
+`;
+
+const LatestReleaseItem = styled(LatestRelease)`
+  margin: 40px 0;
+  text-align: initial;
 `;
 
 export default Info;
