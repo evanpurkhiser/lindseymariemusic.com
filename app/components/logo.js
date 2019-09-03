@@ -17,8 +17,8 @@ const LogoContainer = styled('div')`
   background: #fce5f0;
   color: #62494c;
   border-radius: 5px;
-  height: 316px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 40px 30px;
 `;
 
