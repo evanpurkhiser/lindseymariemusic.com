@@ -6,7 +6,7 @@ const LatestRelease = ({ className, ...props }) => (
     <Artwork src="https://f4.bcbits.com/img/a0230210796_16.jpg" />
     <Info>
       <strong>Alive</strong> by Lindsey Marie
-      <br /> Available for purchase now on{' '}
+      <br /> Now available on{' '}
       <a href="https://lindseymariemusic.bandcamp.com/track/alive">Bandcamp</a>
     </Info>
 
@@ -80,5 +80,9 @@ export default styled(LatestRelease)`
     border-radius: 2px;
     color: #fff;
     background: #f1a8b9;
+
+    @media screen and (max-width: 400px) {
+      display: none;
+    }
   }
 `;
