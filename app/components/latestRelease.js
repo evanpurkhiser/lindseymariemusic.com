@@ -32,7 +32,7 @@ class LatestRelease extends React.Component {
     const { id, art_id, title, page_url } = data[0];
 
     return (
-      <div className={className}>
+      <Wrapper className={className}>
         <Artwork src={`https://f4.bcbits.com/img/a${art_id}_16.jpg`} />
         <Info>
           <strong>{title}</strong>
@@ -51,7 +51,7 @@ class LatestRelease extends React.Component {
             />
           </PlayerWrapper>
         </div>
-      </div>
+      </Wrapper>
     );
   }
 }
@@ -117,7 +117,7 @@ const Loader = styled('div')`
   background-size: 800px 90px;
 `;
 
-export default styled(LatestRelease)`
+const Wrapper = styled('div')`
   ${styles};
   grid-template-columns: 90px 1fr;
   grid-template-rows: 1fr max-content;
@@ -141,3 +141,5 @@ export default styled(LatestRelease)`
     }
   }
 `;
+
+export default LatestRelease;
