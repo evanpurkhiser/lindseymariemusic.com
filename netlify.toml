@@ -3,8 +3,3 @@
   to = "https://lindseymariemusic.bandcamp.com"
   status = 200
   force = true
-
-[[headers]]
-  for = "/tracks-proxy"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
