@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled, { css, keyframes } from 'react-emotion';
 
 class LatestRelease extends React.Component {
   state = { data: null };
@@ -25,7 +25,7 @@ class LatestRelease extends React.Component {
     const { data } = this.state;
 
     if (data === null || data.length === 0) {
-      return null;
+      return <Loader />;
     }
 
     const { className } = this.props;
@@ -91,6 +91,30 @@ const Player = styled('iframe')`
   margin: -1px;
 `;
 
+const styles = css`
+  border-radius: 4px;
+  padding: 10px;
+  background: #f8f3f2;
+  color: #6f6a6c;
+`;
+
+const loadingAnimation = keyframes`
+  0%{
+    background-position: 0 0
+  }
+  100%{
+    background-position: 800px 0
+  }
+`;
+
+const Loader = styled('div')`
+  ${styles};
+  height: 90px;
+  animation: ${loadingAnimation} 800ms forwards infinite linear;
+  background: linear-gradient(-45deg, #f8f3f2 8%, #fafafa 24%, #f8f3f2 40%);
+  background-size: 800px 90px;
+`;
+
 export default styled(LatestRelease)`
   position: relative;
   display: grid;
@@ -98,10 +122,7 @@ export default styled(LatestRelease)`
   grid-template-rows: 1fr max-content;
   grid-template-areas: 'a i' 'a p';
   grid-gap: 12px;
-  border-radius: 4px;
-  padding: 10px;
-  background: #f8f3f2;
-  color: #6f6a6c;
+  ${styles};
 
   :before {
     content: 'Newest Single';
