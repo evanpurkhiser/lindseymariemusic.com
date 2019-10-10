@@ -1,5 +1,10 @@
 [[redirects]]
-  from = "/tracks/"
+  from = "/tracks"
   to = "https://lindseymariemusic.bandcamp.com"
   status = 200
   force = true
+
+[[headers]]
+  for = "/tracks"
+  [headers.values]
+  Access-Control-Allow-Origin: *
