@@ -111,7 +111,7 @@ const loadingAnimation = keyframes`
 
 const Loader = styled('div')`
   ${styles};
-  height: 90px;
+  height: 110px;
   animation: ${loadingAnimation} 800ms forwards infinite linear;
   background: linear-gradient(-45deg, #f8f3f2 8%, #fafafa 24%, #f8f3f2 40%);
   background-size: 800px 90px;
