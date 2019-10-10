@@ -6,7 +6,7 @@ import * as Sentry from '@sentry/browser';
 import Info from 'app/sections/info';
 
 
-Sentry.init({ dsn: 'https://2afa25599321471fbc5dd9610bd74804@sentry.io/1776129' });
+Sentry.init({ dsn: 'https://8a4f6e8f34b44975aa38d8831d9eeb42@sentry.io/1776129' });
 
 injectGlobal`
   * {
