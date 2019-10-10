@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import styled, { injectGlobal } from 'react-emotion';
+import * as Sentry from '@sentry/browser';
 
 import Info from 'app/sections/info';
+
+
+Sentry.init({ dsn: 'https://2afa25599321471fbc5dd9610bd74804@sentry.io/1256756' });
 
 injectGlobal`
   * {
