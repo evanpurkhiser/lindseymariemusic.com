@@ -5,7 +5,7 @@ const LatestRelease = ({ className, ...props }) => (
   <div className={className}>
     <Artwork src="https://f4.bcbits.com/img/a1697872586_16.jpg" />
     <Info>
-      <strong>Still Into You (feat Daniel Harte)</strong> by Lindsey Marie
+      <strong>Still Into You (feat Daniel Harte)</strong>
       <br /> Now available on{' '}
       <a href="https://lindseymariemusic.bandcamp.com/track/still-into-you-feat-daniel-harte">
         Bandcamp
