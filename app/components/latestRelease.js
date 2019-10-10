@@ -23,12 +23,12 @@ class LatestRelease extends React.Component {
 
   render() {
     const { data } = this.state;
+    const { className } = this.props;
 
     if (data === null || data.length === 0) {
-      return <Loader />;
+      return <Loader className={className} />;
     }
 
-    const { className } = this.props;
     const { id, art_id, title, page_url } = data[0];
 
     return (
