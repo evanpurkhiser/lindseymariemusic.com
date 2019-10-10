@@ -1,28 +1,60 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-const LatestRelease = ({ className, ...props }) => (
-  <div className={className}>
-    <Artwork src="https://f4.bcbits.com/img/a1697872586_16.jpg" />
-    <Info>
-      <strong>Still Into You (feat Daniel Harte)</strong>
-      <br /> Now available on{' '}
-      <a href="https://lindseymariemusic.bandcamp.com/track/still-into-you-feat-daniel-harte">
-        Bandcamp
-      </a>
-    </Info>
+class LatestRelease extends React.Component {
+  state = { data: null };
 
-    <div style={{ gridArea: 'p' }}>
-      <PlayerWrapper>
-        <Player
-          src="https://bandcamp.com/EmbeddedPlayer/track=4075136898/size=small/bgcol=ff0000/linkcol=da6da1/artwork=none/transparent=true/"
-          allow="encrypted-media"
-          allowFullScreen
-        />
-      </PlayerWrapper>
-    </div>
-  </div>
-);
+  loadTracks = () =>
+    fetch('http://lindseymariemusic.com/tracks-proxy')
+      .then(resp => resp.text())
+      .then(text => {
+        const parser = new DOMParser();
+        const htmlDocument = parser.parseFromString(text, 'text/html');
+        const data = JSON.parse(
+          htmlDocument.documentElement.querySelector('#pgBd .music-grid')
+            .attributes['data-initial-values'].value
+        );
+        this.setState({ data });
+      });
+
+  componentDidMount() {
+    this.loadTracks();
+  }
+
+  render() {
+    const { data } = this.state;
+
+    if (data === null || data.length === 0) {
+      return null;
+    }
+
+    const { className } = this.props;
+    const { id, art_id, title, page_url } = data[0];
+
+    return (
+      <div className={className}>
+        <Artwork src={`https://f4.bcbits.com/img/a${art_id}_16.jpg`} />
+        <Info>
+          <strong>{title}</strong>
+          <br /> Now available on{' '}
+          <a href={`https://lindseymariemusic.bandcamp.com/${page_url}`}>
+            Bandcamp
+          </a>
+        </Info>
+
+        <div style={{ gridArea: 'p' }}>
+          <PlayerWrapper>
+            <Player
+              src={`https://bandcamp.com/EmbeddedPlayer/track=${id}/size=small/bgcol=ff0000/linkcol=da6da1/artwork=none/transparent=true/`}
+              allow="encrypted-media"
+              allowFullScreen
+            />
+          </PlayerWrapper>
+        </div>
+      </div>
+    );
+  }
+}
 
 const Artwork = styled('img')`
   width: 100%;
