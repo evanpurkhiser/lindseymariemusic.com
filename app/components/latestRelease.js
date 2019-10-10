@@ -92,6 +92,8 @@ const Player = styled('iframe')`
 `;
 
 const styles = css`
+  position: relative;
+  display: grid;
   border-radius: 4px;
   padding: 10px;
   background: #f8f3f2;
@@ -116,13 +118,11 @@ const Loader = styled('div')`
 `;
 
 export default styled(LatestRelease)`
-  position: relative;
-  display: grid;
+  ${styles};
   grid-template-columns: 90px 1fr;
   grid-template-rows: 1fr max-content;
   grid-template-areas: 'a i' 'a p';
   grid-gap: 12px;
-  ${styles};
 
   :before {
     content: 'Newest Single';
