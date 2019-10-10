@@ -22,7 +22,7 @@ const Info = props => (
         studio at home and am able to provide high quality vocals in a fast and
         collaborative manner. Below you can find links to all my other pages and
         social media, feel free to message me anytime. You can also listen below
-        to my latest l solo release on Bandcamp, where I often release originals
+        to my latest solo release on Bandcamp, where I often release originals
         and covers.
       </p>
       <p>
