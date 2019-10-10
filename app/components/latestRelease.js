@@ -5,7 +5,7 @@ class LatestRelease extends React.Component {
   state = { data: null };
 
   loadTracks = () =>
-    fetch('http://lindseymariemusic.com/tracks-proxy')
+    fetch('https://lindseymariemusic.com/tracks-proxy')
       .then(resp => resp.text())
       .then(text => {
         const parser = new DOMParser();
