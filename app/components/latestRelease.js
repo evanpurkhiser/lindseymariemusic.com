@@ -3,17 +3,19 @@ import styled from 'react-emotion';
 
 const LatestRelease = ({ className, ...props }) => (
   <div className={className}>
-    <Artwork src="https://f4.bcbits.com/img/a0230210796_16.jpg" />
+    <Artwork src="https://f4.bcbits.com/img/a1697872586_16.jpg" />
     <Info>
-      <strong>Alive</strong> by Lindsey Marie
+      <strong>Still Into You (feat Daniel Harte)</strong> by Lindsey Marie
       <br /> Now available on{' '}
-      <a href="https://lindseymariemusic.bandcamp.com/track/alive">Bandcamp</a>
+      <a href="https://lindseymariemusic.bandcamp.com/track/still-into-you-feat-daniel-harte">
+        Bandcamp
+      </a>
     </Info>
 
     <div style={{ gridArea: 'p' }}>
       <PlayerWrapper>
         <Player
-          src="https://bandcamp.com/EmbeddedPlayer/track=3692871764/size=small/bgcol=ff0000/linkcol=da6da1/artwork=none/transparent=true/"
+          src="https://bandcamp.com/EmbeddedPlayer/track=4075136898/size=small/bgcol=ff0000/linkcol=da6da1/artwork=none/transparent=true/"
           allow="encrypted-media"
           allowFullScreen
         />
