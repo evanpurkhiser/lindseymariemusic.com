@@ -5,8 +5,6 @@ import styled, { injectGlobal } from 'react-emotion';
 import Info from 'app/sections/info';
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Comfortaa|Nunito:400,600');
-
   * {
     box-sizing: border-box;
   }
