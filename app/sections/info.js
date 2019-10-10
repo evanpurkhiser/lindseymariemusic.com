@@ -91,7 +91,7 @@ const HeaderLogo = styled(Logo)`
 `;
 
 const Letter = styled('section')`
-  font-family: 'The Girl Next Door';
+  font-family: 'Handlee';
   text-align: left;
   margin-top: 3em;
 `;
