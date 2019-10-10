@@ -18,7 +18,7 @@ class LatestRelease extends React.Component {
       });
 
   componentDidMount() {
-    //this.loadTracks();
+    this.loadTracks();
   }
 
   render() {
