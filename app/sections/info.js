@@ -14,14 +14,31 @@ const Info = props => (
   <Section>
     <HeaderLogo />
 
-    <Title>Singer &amp; Songwriter</Title>
-    <p>
-      Lindsey Marie is a multi-genre vocalist and songwriter based out of
-      Chicago USA. Having fostered a love and passion for singing since
-      childhood, and armed with a unique vocal range of Alto up through
-      Mezzo-Soprano, Lindsey’s powerful and hard hitting vocals include an
-      emotional edge that resonates across the dance floor.
-    </p>
+    <Letter>
+      <p>Hi Loves!</p>
+      <p>
+        Thank you so much for visiting my webpage, I appreciate you and all your
+        support. I am a multi Genre vocalist based out of Chicago. I have a
+        studio at home and am able to provide high quality vocals in a fast and
+        collaborative manner. Below you can find links to all my other pages and
+        social media, feel free to message me anytime. You can also listen below
+        to my latest l solo release on Bandcamp, where I often release originals
+        and covers.
+      </p>
+      <p>
+        I do vocals for many other artists as well which you can hear on my
+        Facebook and SoundCloud.
+      </p>
+      <p>
+        Know you are loved and thank you again for all your support, truly means
+        the world to me 💕
+      </p>
+      <p>
+        Sincerely,
+        <br />
+        Lindsey Marie
+      </p>
+    </Letter>
 
     <LatestReleaseItem />
 
@@ -73,8 +90,10 @@ const HeaderLogo = styled(Logo)`
   }
 `;
 
-const Title = styled('h1')`
-  margin: 50px 0;
+const Letter = styled('section')`
+  font-family: 'The Girl Next Door';
+  text-align: left;
+  margin-top: 3em;
 `;
 
 const SocialIcons = styled('div')`

@@ -40,6 +40,10 @@ injectGlobal`
     }
   }
 
+  p {
+    margin: 0.5em 0;
+  }
+
   @media screen and (max-width: 600px) {
     h1 {
       font-size: 1.8rem;
