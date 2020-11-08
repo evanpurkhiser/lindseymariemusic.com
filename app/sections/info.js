@@ -1,16 +1,15 @@
-import React from 'react';
-import styled from 'react-emotion';
+import React from "react";
+import styled from "react-emotion";
 
-import Logo from 'app/components/logo';
-import LatestRelease from 'app/components/latestRelease';
+import Logo from "app/components/logo";
 
-import facebookLogo from 'app/assets/facebook.svg';
-import instagramLogo from 'app/assets/instagram.svg';
-import spotifyLogo from 'app/assets/spotify.svg';
-import bandcampLogo from 'app/assets/bandcamp.svg';
-import soundcloudLogo from 'app/assets/soundcloud.svg';
+import facebookLogo from "app/assets/facebook.svg";
+import instagramLogo from "app/assets/instagram.svg";
+import spotifyLogo from "app/assets/spotify.svg";
+import bandcampLogo from "app/assets/bandcamp.svg";
+import soundcloudLogo from "app/assets/soundcloud.svg";
 
-const Info = props => (
+const Info = (props) => (
   <Section>
     <HeaderLogo />
 
@@ -40,8 +39,6 @@ const Info = props => (
       </p>
     </Letter>
 
-    <LatestReleaseItem />
-
     <SocialIcons>
       <Icon
         src={facebookLogo}
@@ -63,16 +60,16 @@ const Info = props => (
     </SocialIcons>
 
     <small>
-      Contact{' '}
+      Contact{" "}
       <a href="mailto:lindsey.marie.vocalist@gmail.com">
         lindsey.marie.vocalist@gmail.com
-      </a>{' '}
+      </a>{" "}
       for inquries
     </small>
   </Section>
 );
 
-const Section = styled('section')`
+const Section = styled("section")`
   max-width: 750px;
   padding: 4vh 95px;
   text-align: center;
@@ -90,13 +87,13 @@ const HeaderLogo = styled(Logo)`
   }
 `;
 
-const Letter = styled('section')`
-  font-family: 'Handlee';
+const Letter = styled("section")`
+  font-family: "Handlee";
   text-align: left;
   margin-top: 3em;
 `;
 
-const SocialIcons = styled('div')`
+const SocialIcons = styled("div")`
   display: flex;
   max-width: 350px;
   margin: 40px auto;
@@ -119,11 +116,6 @@ const Icon = styled(({ src, to, ...props }) => (
     color: #da6da1;
     transform: scale(1.1);
   }
-`;
-
-const LatestReleaseItem = styled(LatestRelease)`
-  margin: 40px 0;
-  text-align: initial;
 `;
 
 export default Info;
